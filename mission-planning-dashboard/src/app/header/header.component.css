@@ -1,0 +1,18 @@
+.main {
+    font-family: 'Lucida Handwriting';
+}
+
+.names {
+    font-size: 25px;
+    border: dashed darkred;
+    border-radius: 100%;
+    text-align: center;
+}
+
+#gradiant {
+    background: red; /*for browsers that don't support gradiant*/
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, rgb(78, 78, 247), violet); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, rgb(78, 78, 247), violet); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, rgb(78, 78, 247), violet); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, orange , yellow, green, cyan, rgb(78, 78, 247), violet); /* Standard syntax (must be last) */
+}
