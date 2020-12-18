@@ -1,7 +1,7 @@
 <h3 class = "crew">Crew</h3>
 <ul class="crew">
-    <li>{{ crew[0]}}</li>
-    <li>{{crew[1]}}</li>
-    <li>{{crew[2]}}</li>
+    <li *ngFor = "let crewMember of crew">
+        {{crewMember}}
+    </li>
 </ul>
 
