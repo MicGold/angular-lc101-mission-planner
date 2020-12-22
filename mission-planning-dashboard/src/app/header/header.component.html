@@ -1,5 +1,21 @@
 <h1 id="gradiant" class="main">Mission Planning Dashboard</h1>
 <div class="names">
-    <h3>Mission Name: {{ missionName }}</h3>
-    <h3>Carrier Rocket: {{ rocketName }}</h3>
+    <h3 *ngIf = '!editMissionName; else editMission' (click) = 'editMissionName = true'>Mission Name: {{ missionName }}</h3>
+    <h3 *ngIf = '!editRocketName; else editRocket' (click) = 'editRocketName = true'>Carrier Rocket: {{ rocketName }}</h3>
 </div>  
+
+<ng-template #editMission>
+    <h3>
+        Mission Name:
+        <input #newName (keyup.enter)= 'editMissionName = changeMissionName(newName.value)' type = 'text'/>
+        <button (click) = 'editMissionName = changeMissionName(newName.value)'>Save</button>
+    </h3>
+</ng-template>
+
+<ng-template #editRocket>
+    <h3>
+        Rocket Name:
+        <input #newRocket (keyup.enter)= 'editRocketName = changeRocketName(newRocket.value)' type = 'text'/>
+        <button (click) = 'editRocketName = changeRocketName(newRocket.value)'>Save</button>
+    </h3>
+</ng-template>
